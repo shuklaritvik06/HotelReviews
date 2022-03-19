@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header')%>
+    <title>Rate Hotel</title>
+</head>
+<body>
+<div class="container">
+    <%- include('./partials/nav')%>
+    <form action="/rate/<%=id%>" method="post" class="mt-3">
+        <label for="rating" class="form-label mt-3">Restaurant Rating</label><input type="number" name="rating" id="rating" class="form-control" max="5" min="1" required>
+        <div class="mt-3">
+            <a href="/dashboard"><button type="button" class="btn btn-secondary">Cancel</button></a>
+            <button type="submit" class="btn btn-success">Rate</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

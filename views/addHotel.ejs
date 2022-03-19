@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header')%>
+    <title>Add Hotel</title>
+</head>
+<body>
+<div class="container">
+    <%- include('./partials/nav')%>
+    <form action="/add" method="post" class="mt-3">
+        <label for="name" class="form-label mt-3">Restaurant Name</label><input type="text" name="name" id="name" class="form-control" placeholder="Enter restaurant name" required>
+        <label for="location" class="form-label mt-3">Restaurant City</label><input type="text" name="location" id="location" class="form-control" placeholder="Enter restaurant city" required>
+        <label for="description" class="form-label mt-3">Restaurant Description</label><textarea name="description" id="description" cols="30" rows="6"  minlength="500" maxlength="600" class="form-control" style="resize: none"  required></textarea>
+        <label for="imageurl" class="form-label mt-3">Restaurant Image Url</label><input type="text" name="imageurl" id="imageurl" class="form-control" placeholder="Enter restaurant image url" required>
+        <label for="rating" class="form-label mt-3">Restaurant Rating</label><input type="number" name="rating" id="rating" class="form-control" max="5" min="1" required>
+        <div class="mt-3">
+            <a href="/dashboard"><button type="button" class="btn btn-secondary">Cancel</button></a>
+            <button type="submit" class="btn btn-success">Add</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
